@@ -43,7 +43,7 @@ const Header = () => {
   const logoImage = ""; // Add your image path or leave empty for text logo
 
   return (
-    <header className="bg-white shadow-md">
+    <header className="bg-white shadow-xl/50 shadow-flame-red z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -119,21 +119,33 @@ const Header = () => {
         {headerData.menuItems.map((item, idx) =>
           item.dropdown ? (
             <details key={idx} className="py-2">
-              <summary className="cursor-pointer flex items-center justify-between">
+              <summary className="cursor-pointer flex items-center justify-between group relative overflow-hidden py-2 px-3">
                 <span>{item.label}</span>
+
                 <FaChevronDown className="ml-2 text-sm" />
+                <span className="absolute -left-2 group-hover:left-0 top-0 w-2 h-full bg-red-500 rounded-r-full transition-all duration-300 "></span>
               </summary>
               <div className="pl-4">
                 {item.items.map((subItem, subIdx) => (
-                  <Link key={subIdx} href={subItem.href} className="block py-1">
+                  <Link
+                    key={subIdx}
+                    href={subItem.href}
+                    className="block relative group overflow-hidden py-2 px-3"
+                  >
                     {subItem.label}
+                    <span className="absolute -left-2 group-hover:left-0 top-0 w-2 h-full bg-red-500 rounded-r-full transition-all duration-300 "></span>
                   </Link>
                 ))}
               </div>
             </details>
           ) : (
-            <Link key={idx} href={item.href} className="block py-2">
+            <Link
+              key={idx}
+              href={item.href}
+              className="block py-2 px-3 relative group overflow-hidden"
+            >
               {item.label}
+              <span className="absolute -left-2 group-hover:left-0 top-0 w-2 h-full bg-red-500 rounded-r-full transition-all duration-300 "></span>
             </Link>
           )
         )}
