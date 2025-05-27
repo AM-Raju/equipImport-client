@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="container  mx-auto min-h-[600px] my-12">
+    <section className="container  mx-auto min-h-[600px] my-16 lg:min-h-full">
       <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-none md:grid-rows-2 gap-2 lg:gap-2 xl:gap-6 h-full">
         <div className="bg-slate-700 w-full h-full md:row-span-2 flex items-center justify-center p-6">
           <h2 className="font-extrabold text-4xl md:text-5xl lg:text-7xl  text-white text-center leading-tight md:hidden">
