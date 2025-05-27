@@ -1,7 +1,9 @@
+import Header from "@/components/shared/Header";
+
 export default function HomeLayout({ children }) {
   return (
     <div>
-      {/* <Header></Header> */}
+      <Header></Header>
 
       <div>{children}</div>
       {/* <Footer></Footer> */}
