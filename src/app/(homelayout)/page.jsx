@@ -1,3 +1,4 @@
+import Faq from "@/components/home/faq/FAQ";
 import Gallery from "@/components/home/gallery/Gallery";
 import Message from "@/components/home/message/Message";
 import Services from "@/components/home/services/Services";
@@ -14,7 +15,7 @@ const HomePage = () => {
       <Message></Message>
       <WhyChooseUs></WhyChooseUs>
       <Gallery></Gallery>
-      <div className="h-96"></div>
+      <Faq></Faq>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
+import Logo from "../ui/Logo";
 
 const headerData = {
   logoText: "MySite",
@@ -40,21 +41,11 @@ const Header = () => {
     }, 200);
   };
 
-  const logoImage = ""; // Add your image path or leave empty for text logo
-
   return (
     <header className="bg-white shadow-xl/50 shadow-flame-red z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          {logoImage ? (
-            <Image src={logoImage} alt="Logo" width={40} height={40} />
-          ) : (
-            <h1 className="text-xl font-bold text-gray-800">
-              {headerData.logoText}
-            </h1>
-          )}
-        </div>
+        <Logo></Logo>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 items-center relative">
