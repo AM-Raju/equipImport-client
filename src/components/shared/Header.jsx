@@ -10,8 +10,8 @@ import Logo from "../ui/Logo";
 const headerData = {
   logoText: "MySite",
   menuItems: [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
     {
       label: "Services",
       dropdown: true,

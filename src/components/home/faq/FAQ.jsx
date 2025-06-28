@@ -58,11 +58,11 @@ export default function Faq() {
           Frequently asked questions about our LPG services.
         </p>
 
-        <div className="space-y-2 max-w-4xl mx-auto">
+        <div className="space-y-2 max-w-5xl mx-auto">
           {faqData.map((faq, index) => (
             <div
               key={index}
-              className="border border-gray-200  bg-white shadow-md"
+              className="border border-gray-200 bg-white shadow-md overflow-hidden transition-all duration-500"
             >
               <button
                 onClick={() => toggleFaq(index)}
@@ -75,9 +75,16 @@ export default function Faq() {
                   <FaChevronDown />
                 )}
               </button>
-              {openIndex === index && (
-                <div className="px-6 py-4 text-gray-700">{faq.answer}</div>
-              )}
+
+              <div
+                className={`px-6 text-gray-700 transition-all duration-300 ease-initial overflow-hidden ${
+                  openIndex === index
+                    ? "max-h-96 opacity-100 py-4"
+                    : "max-h-0 opacity-0 py-0"
+                }`}
+              >
+                {faq.answer}
+              </div>
             </div>
           ))}
         </div>
