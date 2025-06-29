@@ -12,16 +12,22 @@ const headerData = {
   menuItems: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Products", href: "/products" },
     {
       label: "Services",
       dropdown: true,
       items: [
-        { label: "Service One", href: "#" },
-        { label: "Service 2", href: "#" },
-        { label: "Service 3", href: "#" },
+        {
+          label: "LPG Pipeline Reticulation (Domestic)",
+          href: "/services/domestic",
+        },
+        {
+          label: "LPG Pipeline Reticulation (Industrial)",
+          href: "/services/industrial",
+        },
       ],
     },
-    { label: "Contact", href: "#" },
+    { label: "Contact", href: "/contact" },
   ],
 };
 
