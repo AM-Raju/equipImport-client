@@ -7,7 +7,7 @@ const IndustrialLPG = () => {
   return (
     <section className="py-12 min-h-[530px] ">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-8 ">
+        <div className="flex flex-col lg:flex-row-reverse items-center gap-8 ">
           {/* Image */}
           <div className="w-full lg:w-2/3 bg-red-300 h-full">
             <img
